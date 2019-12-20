@@ -142,14 +142,74 @@ echo "------------------"
 echo "Terminado (x1)"
 echo "------------------"
 
-############
-#  Schema  #
-############
+###############
+#  Plantilla  #
+###############
 git add ../plantilla.html &&
 git nota "Pagina plantilla" &&
 git sube 
 echo "------------------"
 echo "Terminado (x1)"
+echo "------------------"
+
+###################
+#  clasificacion  #
+###################
+git add ../contents/clasificacion.html &&
+git nota "Pagina clasificacion" &&
+git sube 
+echo "------------------"
+echo "Terminado (x1)"
+echo "------------------"
+
+################
+#  clustering  #
+################
+git add ../contents/clustering.html &&
+git nota "Pagina clustering" &&
+git sube 
+echo "------------------"
+echo "Terminado (x2)"
+echo "------------------"
+
+############
+#  Examen  #
+############
+git add ../contents/examen/ExamenFinal.html &&
+git nota "Pagina examen final" &&
+git sube 
+echo "------------------"
+echo "Terminado (x3)"
+echo "------------------"
+
+#################
+#  Mach. Learn  #
+#################
+git add ../contents/machinelearning.html &&
+git nota "Pagina ML" &&
+git sube 
+echo "------------------"
+echo "Terminado (x4)"
+echo "------------------"
+
+###############
+#  Regresion  #
+###############
+git add ../contents/regresion.html &&
+git nota "Pagina regresion" &&
+git sube 
+echo "------------------"
+echo "Terminado (x5)"
+echo "------------------"
+
+##############
+#  Sistemas  #
+##############
+git add ../contents/sistemasRecomendadores.html &&
+git nota "Pagina Sistemas" &&
+git sube 
+echo "------------------"
+echo "Terminado (x5)"
 echo "------------------"
 
 ############
