@@ -1,0 +1,37 @@
+Hola, y bienvenidos a Machine Learning con Python.
+En este curso, aprenderás cómo se utiliza Machine Learning en varios campos e industrias clave.
+Por ejemplo, en la industria del cuidado de la salud, los científicos de datos utilizan Machine Learning para predecir
+si una célula humana que se cree está en riesgo de desarrollar cáncer, es benigno
+o maligna.
+Como tal, Machine Learning puede desempeñar un papel clave al determinar el estado de salud y bienestar de una persona.
+También aprenderás sobre el valor de los árboles de decisión y cómo construir un buen árbol de decisiones
+de los datos históricos que ayuda a los médicos a prescribir la medicina adecuada para cada uno de sus pacientes.
+Aprenderás cómo los banqueros usan Machine Learning para tomar decisiones sobre si aprobar o no una solicitud
+de un préstamo.
+Y aprenderás a utilizar Machine Learning para realizar la segmentación de clientes en un banco, donde
+normalmente no es fácil de ejecutar debido al gran volúmen de datos variables.
+En este curso, verán cómo Machine Learning ayuda a sitios web como YouTube, Amazon o
+Netflix sugerir recomendaciones a sus clientes sobre varios productos o servicios, tales como
+cuales películas podrían estar interesados para ir a ver o qué libros comprar.
+¡Hay tanto que puedes hacer con Machine Learning!
+Aquí, aprenderás a como utilizar bibliotecas populares de python para crear tu modelo.
+Por ejemplo, dado un conjunto de set de datos de automóviles, utilizamos la biblioteca de sci-kit learn (sklearn)
+para estimar la emisión de CO2 de los automóviles, utilizando el tamaño de su motor o cilindros.
+!Incluso podemos predecir cuáles serán las emisiones de CO2 de un automóvil que ni siquiera ha sido
+producido todavía!
+Y veremos cómo el sector de la industria de las telecomunicaciones puede predecir el abandono de clientes.
+Puedes ejecutar y practicar el código de todos estos ejemplos utilizando el entorno del laboratorio incorporado
+en este curso.
+No tienes que instalar nada en tu ordenador o hacer algo en la nube.
+Todo lo que tiene que hacer es hacer clic en un botón para iniciar el entorno de laboratorio en tu navegador de internet.
+El código para las ejemplos ya está escrito usando el lenguaje de programación python, en Jupyter notebooks,
+y puedes ejecutarlo para ver los resultados, o cambiarlo para que entiendas mejor los algoritmos.
+Entonces, ¿Qué serás capaz de lograr al tomar este curso?
+Bueno, invirtiendo unas pocas horas a la semana en las próximas semanas, vas a adquirir nuevas
+habilidades para añadir a tu cv, tales como regresión, clasificación, agrupamiento, sci-kit learn
+y SciPy.
+También obtendrás nuevos proyectos que puedes agregar a tu portafolio, incluyendo la detección de cáncer,
+predicción de tendencias económicas, predicción de abandono de clientes, motores de recomendación y muchos más.
+También obtendrá un certificado en Machine Learning para probar su competencia, y compartirlo
+en cualquier lugar que te guste en línea o fuera de línea, tales como perfiles de LinkedIn y redes sociales.
+Así que empecemos.

@@ -1,0 +1,114 @@
+¡Hola, y bienvenidos!
+En este vídeo, te daré una introducción de alto nivel a Machine Learning.
+Así que empecemos.
+Esta es una muestra de célula humana extraída de un paciente.
+Y esta célula tiene características … por ejemplo, su espesor de aglutinación es 6,
+la uniformidad de tamaño celular es 1, su adhesión marginal es 1, y así.
+Una de las preguntas más interesantes que podemos hacer, en este punto es: "¿Es una célula benigna
+ o maligna?"
+En contraste con un tumor benigno, un tumor maligno es un tumor que puede invadir el tejido adyacente
+o diseminarse alrededor del cuerpo, y diagnosticarlo de manera temprana puede ser clave para la supervivencia
+del paciente.
+fácilmente se podría suponer que sólo un médico con años de experiencia podría diagnosticar ese tumor
+y determinar si el paciente está desarrollando cáncer o no.
+¿Cierto?
+Bueno, imagine que ha obtenido un conjunto de datos que contiene características de miles de
+muestras de células humanas extraídas de pacientes que se creía que estaban en riesgo de desarrollar
+cáncer.
+El análisis de los datos originales mostró que muchas de las características diferían significativamente
+entre muestras benignas y malignas.
+Puedes utilizar los valores de estas características celulares en muestras de otros pacientes para dar una
+indicación anticipada de si una nueva muestra puede ser benigna o maligna.
+Debes limpiar los datos, seleccionar un algoritmo adecuado para construir un modelo de predicción,
+y entrenar tu modelo para entender los patrones de células benignas o malignas dentro de los datos.
+Una vez que el modelo ha sido entrenado por medio de datos iterativamente, se puede utilizar para predecir
+tu célula nueva o desconocida con una precisión bastante alta.
+¡Esto es machine learning!
+Es la forma en que un modelo de machine learning puede hacer la tarea de un médico o, al menos, ayudarlo
+para hacer el proceso más rápido.
+Ahora, permítame darle una definición formal de machine learning.
+Machine learning es el subcampo de la ciencia de la computación que "da a las computadoras
+la habilidad de aprender sin ser programadas explícitamente.”
+Permítanme explicar lo que quiero decir cuando digo "sin ser programadas explícitamente."
+Supongan que tienen un conjunto de datos de imágenes de animales como, por ejemplo, perros y gatos, y quieran
+ una aplicación o software sea capaz de reconocerlos y diferenciarlos.
+Lo primero que tienen que hacer es interpretar las imágenes como un conjunto de conjuntos de características.
+Por ejemplo, ¿la imagen muestra los ojos del animal?
+Si es así, ¿cuál es su tamaño?
+¿Tiene orejas?
+¿Qué hay de una cola?
+¿Cuántas piernas?
+¿Tiene alas?
+Antes de machine learning, cada imagen se transformaría en un vector de características.
+Entonces, tradicionalmente, tendríamos que escribir algunas reglas o métodos para que las computadoras
+sean inteligentes y detecten a los animales.
+Pero, fue un fracaso.
+¿Por qué?
+Bueno, como podrás adivinar, se necesitaba muchas reglas, muy dependientes del conjunto de datos actual,
+y no lo suficiente generalizadas como para detectar casos fuera de la muestra.
+Este es el momento en que machine learning entró en escena.
+Usar machine learning nos permite construir un modelo que observe todos los conjuntos de características,
+y su correspondiente tipo de animales, y aprender el patrón de cada animal.
+Se trata de un modelo construido por algoritmos de machine learning.
+Detecta sin haber sido programado explícitamente para hacerlo.
+En esencia, el aprendizaje automático sigue el mismo proceso que un niño de 4 años utiliza para aprender,
+entender, y diferenciar a los animales.
+Así, los algoritmos de machine learning, inspirados por el proceso de aprendizaje humano, iterativamente
+aprenden de los datos, y permiten que las computadoras encuentren información oculta.
+Estos modelos nos ayudan en una variedad de tareas, tales como el reconocimiento de objetos, resúmenes,
+recomendaciones, y así.
+Machine Learning afecta a la sociedad de una forma muy influyente.
+He aquí algunos ejemplos de la vida real.
+En primer lugar, ¿cómo creen que Netflix y Amazon recomiendan videos, películas y programas de televisión a sus usuarios?
+Utilizan machine learning para producir sugerencias que podrías disfrutar!
+Esto es similar a cómo tus amigos te pueden recomendar un programa de televisión, basado en
+su conocimiento sobre los tipos de programas que te gusta ver.
+¿Cómo cree que los bancos toman una decisión al aprobar una solicitud de préstamo?
+Utilizan machine learning para predecir la probabilidad de impago para cada solicitante, y luego aprueban
+o rechazar la solicitud de préstamo en base a esa probabilidad.
+Las compañías de telecomunicaciones utilizan los datos demográficos de sus clientes para segmentarlos, o predecir
+si ellos se retirarán de su compañía el próximo mes.
+Hay muchas otras aplicaciones de machine learning que vemos todos los días en nuestra
+la vida, como los chatbots, acceder a nuestros teléfonos o incluso los juegos de ordenador usan el reconocimiento facial.
+Cada uno utiliza técnicas y algoritmos diferentes de machine learning.
+Por lo tanto, vamos a examinar rápidamente algunas de las técnicas más populares.
+La técnica de Regresión/Estimación se utiliza para predecir un valor continuo, por ejemplo,
+predicción de cosas como el precio de una casa basada en sus características, o para estimar
+la emisión de Co2 del motor de un coche.
+Se utiliza una técnica de clasificación para predecir la clase o categoría, por ejemplo,
+si una célula es benigna o maligna, o si un cliente se va a retirar o no.
+Los grupos de casos similares, por ejemplo, pueden encontrar pacientes similares, o pueden ser utilizados
+para la segmentación de clientes en el campo bancario.
+La técnica de asociación se utiliza para buscar elementos o sucesos que a menudo se producen conjuntamente, por ejemplo,
+artículos de comestibles que normalmente son comprados conjuntamente por un cliente en particular.
+La detección de anomalías se utiliza para descubrir casos anormales e inusuales, por ejemplo, se utiliza
+para la detección de fraude de tarjetas de crédito.
+La minería secuencial se utiliza para predecir el siguiente suceso, por ejemplo, la secuencia de pulsación
+en sitios web.
+La reducción de dimensión se utiliza para reducir el tamaño de los datos.
+Y finalmente, los sistemas de recomendación; esto asocia las preferencias de la gente con otros
+que tienen gustos similares, y recomienda nuevos artículos para ellos, como libros o películas.
+Cubriremos algunas de estas técnicas en los próximos videos.
+En este punto, estoy bastante seguro de que esta pregunta ha cruzado su mente, " ¿Cuál es la diferencia
+entre estas palabras que seguimos escuchando estos días, como inteligencia artificial (o IA),
+Machine Learning y Deep Learning?”
+Bueno, permítanme explicar lo que es diferente entre ellos.
+En breve, IA trata de hacer las computadoras inteligentes para imitar las funciones cognitivas
+de los seres humanos.
+Así que, la Inteligencia Artificial es un campo general con un amplio alcance, incluyendo:
+Proceso de lenguaje, creatividad y resumen.
+Machine Learning es la rama de la IA que cubre la parte estadística de la
+inteligencia artificial.
+Enseña a la computadora a resolver problemas al mirar cientos o miles de ejemplos,
+aprender de ellos, y luego usar esa experiencia para resolver el mismo problema en nuevas situaciones.
+Y Deep Learning es un campo muy especial de Machine Learning donde las computadoras pueden
+aprender y tomar decisiones inteligentes por su cuenta.
+Deep learning involucra un nivel más profundo de automatización en comparación con la mayoría de los algoritmos de machine learning.
+Ahora que hemos completado la introducción a Machine Learning, los videos posteriores
+se enfocarán en la revisión de dos componentes principales: Primero, aprenderás sobre el propósito
+de Machine Learning y donde se puede aplicar en el mundo real;
+y en segundo lugar, obtendrá una visión general de los temas de Machine Learning, por ejemplo,
+aprendizaje supervisado vs aprendizaje no supervisado, evaluación de modelos y varios algoritmos de Machine Learning.
+Así que ahora que tienes noción de lo que hay en reserva para este viaje, continuemos
+nuestra exploración de Aprendizaje Máquina!
+¡Gracias por ver!
