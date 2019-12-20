@@ -1,2 +1,1 @@
-# IntroMachineLearning
-Introduccion a Machine Learning
+<img src="images/Introduccion-ML.png" alt="">
