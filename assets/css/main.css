@@ -1644,6 +1644,14 @@ input, select, textarea {
 		line-height: 4em;
 	}
 
+	.float {
+		display:scroll;
+        position: fixed;;
+        bottom:320px;
+        left:50px;
+	}
+	
+
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
