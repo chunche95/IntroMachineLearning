@@ -199,7 +199,17 @@
 									manipulación y análisis de datos. <br>
 									En particular, ofrece estructuras de datos y operaciones para la manipulación de tablas numéricas y series de tiempo. Scikit-learn es una colección de algortimos y herramientas para machine learning, que es nuestro objetivo aquí, como vamos a usar scikit-learn en los 
 									laboratorios explicamos que <strong>scikit-learn</strong> es una biblioteca gratuita de machine learning para el lenguaje de programación Python. Tiene la mayoría de los algoritmos de clasificación, regresión y agrupamiento y está diseñada para trabajar con las bibliotecas 
-									numéricas y científicasde Python, <strong>NumPy y SciPy</strong>.
+									numéricas y científicasde Python, <strong>NumPy y SciPy</strong>. <br>
+									Además, incluye una documentación muy buena, encima de eso, la implementación de modelos de machine learning con scikit-learn es realmente fácil, con unas pocas líneas de código Python, la mayoría de las tareas que se deben realizar en un pipeline de machine learning 
+									se implementan ya en scikit-learn , incluyendo, preprocesamiento de datos, selección de características, extracción de características, división de entrenamiento/prueba, definición de los algoritmos, modelos de ajuste, parámetros de ajuste, predicción, evaluación  y explotación 
+									del modelo. <br>
+									Básicamente, los algortimos de ML se benefician de la estandarización del conjunto de datos, si hay algunos valores atípicos o campos de escalas diferentes en su conjunto de datos, tiene que arreglarlos. <br>
+									El paquete de preprocesamiento de scikit-learn proporciona varias funciones de utilidad y las clases de transformación para cambiar los vectores de características en bruto en una forma adecuada de vector para modelado. Hay que dividir el conjunto de datos en 
+									conjuntos de entrenamiento y pruebas para entrenar su modelo y luego probar la precisión del modelo por separado. <br>
+									El Scikit-learn puede dividir arreglos o matrices en subconjuntos aleatorios de entrenamiento y pruebas para ti, en una línea de código; entonces, puedes configurar tu algoritmo. Por ejemplo, puede crear un clasificador utilizando un algoritmo de clasificación de vector de soporte. 
+									Llamamos a nuestra instancia de estimador 'clf', e inicializamos sus parámetros. <br>
+									Ahora, puedes entrenar tu modelo con el conjunto de entrenamiento. Al pasar nuestro conjunto de entrenamiento al método 'fit', el modelo 'cfl' aprende a clasificar casos desconocidos. A continuación, podemos utilizar nuestro conjunto de pruebas para ejecutar predicciones. <br>
+									Y, el resultado nos dice cuál es la clase de cada valor desconocido, además, puede utilizar distintas métricas para evaluar la precisión del modelo, por ejemplo, utilizando una matriz de confusión (confusion_matrix) para mostrar los resultados y finalmente, guardar el modelo.
 								</p>
 							</article>
 					</div>
