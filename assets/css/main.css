@@ -1589,6 +1589,7 @@ input, select, textarea {
 			min-width: 80%;
 			max-width: auto;
 			display: inline-block;
+			border-radius: 1em;
 		}
 		.image img {
 			display: block;
@@ -2011,7 +2012,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background: #fff;
+			background: #232323;
 		}
 
 			.wrapper.style2 .title {
