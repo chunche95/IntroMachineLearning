@@ -1581,12 +1581,19 @@ input, select, textarea {
 /* Image */
 	
 	.image {
-		display: inline-block;
+		width: 254px;
+		height: auto;
 	}
-
+		.image.photo {
+			display: inline;
+			min-width: 80%;
+			max-width: auto;
+			display: inline-block;
+		}
 		.image img {
 			display: block;
 			width: 100%;
+			
 		}
 
 		.image.fit {
