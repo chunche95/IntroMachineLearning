@@ -200,13 +200,14 @@
 										Como se ha mencionado anteriormente θ0 y θ1, en la regresiñon lineal simple, son los coeficioentes de línea de ajuste. Podemos usar una simple ecuación para estimar estos coeficientes, Esto esm dado que es una regresión lineal simple, con sólo 2 parámetros, y sabiendo que θ0 y θ1 
 										son el intercepto y la pendiente de la línea, podemos estimarlos directamente a partir de nuestros datos. Se requiere que calculemos la media de las columnas independientes y dependientes, objetivo del conjunto de datos. <br>
 										Tenga en cuenta que todos los datos deben estar disponibles para atravesar y calcular los parámetros. Se puede mostrar que la intercepción y la pendiente se puede calcular usando estas ecuaciones. Podemos empezar por estimar el valor de θ1. <br>
-										<img src="../images/" alt=""> <br>
+										<img src="../images/estimate parameters.PNG" alt=""> <br>
 										Esta es la forma en la que se puede encontrar la pendiente de una línea basado en los datos. x<sub>-</sub> es el valor promedio para el tamaño del motor en nuestro conjunto de datos. <br>
-										<img src="../images/" alt=""> <br>
 										Los xi y yi de la ecuación se refiere al hecho que tenemos que repetir estos cálculos a través de todos los valores de nuestro conjunto  de datos y se refiere en el valor i'th de x o y. <br>
+										<img src="../images/xiyi.PNG" alt=""> <br>
 										Aplicando todos los valores, encontramos θ1=39; es nuestro segundo parámetro. Se usa para calcular el primer parámetro, que es la intercepción de la línea. Ahora, podemos conectar θ1 a la ecuación de la línea para encontrar el valor de θ0. <br>
 										Se calcula fácilmente el valor θ0=125.74, Así que, estos son los dos parámetros para la línea donde θ0 es también llamado coeficiente de derivación y θ1 es coeficiente para la columna de emisión de CO<sub>2</sub>. <br>
-										Ahora, podemos escribir el polinomio de la línea, así que sabemos cómo encontrar el mejor ajuste para nuestros datos, y su ecuación. 
+										Ahora, podemos escribir el polinomio de la línea, así que sabemos cómo encontrar el mejor ajuste para nuestros datos, y su ecuación. <br>
+										<img src="../images/solution emission CO2.PNG" alt="">
 										<hr>
 										¿Cómo podemos usarlo para predecir la emisión de un nuevo coche basado en su tamaño del motor? <br>
 										Después de que encontramos los parámetros de la ecuación lineal, hacer predicciones es tan simple como solucionar la ecuación para un conjunto específico de entradas. Imaginemos que estamos predicioendo CO<sub>2</sub> Emission (y) de EngineSize (x) para el 
