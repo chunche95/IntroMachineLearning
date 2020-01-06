@@ -143,7 +143,85 @@
 										<p></p>
 									</header>
 									<p>
+										No son necesarios saberes previos de álbegra lineal para entender los temas de regersión lineal para poder usarlos de forma efectiva en sus propios porblemas. <br>
+										Así que, empecemos... Echemos un vistazo a este conjunto de datos. Está relacionado con la emisión de CO<sub>2</sub> de diferentes coches. Incluye el tamaño del motor, cilindros, consumo de combustible y las emisiones de CO<sub>2</sub> 
+										para los distintos modelos de coches. La pregunta es: Donde este conjunto de datos, podemos predecir la emisión de CO<sub>2</sub> de un ochce, utilizando otro campo como, por ejemplo, el tamaño del motor? <br>
+										Sencillamente, sí! Podemos usar regresión lineal para predecir un valor continuo como, por ejemplo, Emisión de CO<sub>2</sub>, usando otras variables. La regresión lineal es la aproximación de un modelo lineal que se usa para describir 
+										la relación entre dos o mñas variables. En la regresión lineal simple, hay dos variables: una variable dependiente y una independiente. <br>
+										El punto clave en la regresión lineal es que nuestro valor dependiente debe ser continuo y no puede ser un valor discreto. Sin embargo, las variables independientes pueden ser medidas en una escala de medida categórica o continua. <br>
+										Existen dos tipos de modelos de regresión lineal:
+										<ul>
+											<li>Regresión simple</li>
+											<li>Regresión múltiple</li>
+										</ul>
+										<img src="../images/linearregressiontopology.PNG" alt="">
+										La <strong>reg. simple</strong> es cuando se usa una variable independiente para estimar una variable dependiente. Por ejemplo, predicando la emisión de CO<sub>2</sub> usando la variable <i>Engine Size</i>. Cuando se usa más de una variable independiente 
+										ahora, el proceso se denomina <strong>reg. lineal múltiple</strong>. <br>
+										Por ejemplo, prediciendo las emisiones de CO<sub>2</sub> usando <i>EngineSize y Cylinders</i> de los coches. <hr>
+										Nuestro enfoque es en una regresión lineal simple. Ahora, veamos nuestro conjunto de datos. <br>
+										<img src="../images/data.PNG" alt=""> <br>
+										Para entender la regresión lineal, podemos trazar nuestras variables aquí, mostramos el tamaño del motor como una variable independiente, emisión como el valor objetivo a predecir. Un diagrama de dispersión muestra claramente la relación entre 
+										variables en las que los cambios de una variable "explican" o posiblemnte, "hacen que" cambie la otra variable. Además, indica que estas variables están relacionadas linealmente. <br>
+										Con la regresión lineal, puede ajustar una línea a través de los datos. Por ejemplo, a medida que aumenta el EngineSizem también las emisiones. <br>
+										Con la regresión lineal, se puede modelar la relación de estas variables, un buen modelo se puede usar para predecir cuál es la emisión aproximada decada coche. <br>
+										¿Cómo se usa esta linea para predecir ahora? SUpongamos, por un momento, que la línea es un buen ajuste de los datos. Podemos usarlo para predecir la emisión de un coche desconocido. Po ejemplo, para un coche de muestra con motor tamaño: 2,4, se 
+										puede encontrar la emisión es 214. <br>
+										Ahora, vamos a hablar de lo que esta línea de ajuste es en realidad. Vamos a predecir el valor objetivo, y en nuestro caso, usando la variable independiente "tamaño motor" representada por x1. <br>
+										<img src="../images/polinomio.PNG" alt="">
+										La línea de ajuste se muestra tradicionalmente como un polinomio. En un problema de regresión simple (una sola x), la forma del modelo sería θ0 + θ1 x1. En esta ecuación, y ̂ es la variable dependiente o el valor pronosticado, x1 es la variable independiente; 
+										los parámetros 0 y 1 son los parámetros de la línea  que debemos ajustar. θ1 es conocida como la "pendiente" o "gradiante" de la línea de ajuste y el valor θ0 se conoce como el "intercepto" θ0 y θ1 son los coeficientes de la ecuación lineal. Se puede 
+										interpretar esta ecuación como si y^ fuera una función de x1, o una función que dependa de x1. <br>
+										¿Cómo se dibujaría una línea a través de los puntos? y ¿cómo se determina cuál de las líneas encaja mejor? <br>
+										La regresión lineal estima los coeficientes de la línea. Esto significa que debemos calcular θo y θ1 para encontrar la mejor línea para "ajustar" los datos. Esta línea estomaría mejor la emisiñon de los data points desconocidos. <br>
+										Vamos a ver cómo podemos encontrar esta línea o para ser más precisos, cómo podemos ajustar los parámetros para hacer que la línea seael mejor ajuste para los datos.Por un momento supongamos que ya hemos encontrado la mejor línea de ajuste para nuestros datos.
+										Ahora, vamos a pasar por todos los puntos y comprobar lo bien que se alinean con esta línea. <br>
+										<img src="../images/lineal-error.PNG" alt=""> 
+										<p><b>Error residual.</b></p><br>
+										El mejor ajuste, significa que si tenemos, por ejemplo, un coche con un tamaño de motor de x1=5.4 y CO<sub>2</sub>=250, su CO<sub>2</sub> debe aproximarse muy cerca del valor real, que es y=250, basado en datos históricos, pero, si usamos la línea de ajuste, o mejor dicho, 
+										usando nuestro polinomio con parámetros conocidos para predecir la emisión de CO<sub>2</sub>, devolverá y=340. <br>
+										Ahora, si comparamos el valor real de la emisión del coche con lo que predijimos usando nuestro modelo, descubrirá que tenemos un error de 90 unidades. <br>
+										Esto significa que nuestra línea de predicción no es precisa, este error se denomina <strong>error residual</strong>. <br>
+										Por lo tanto , podemos decir que el error es la distancia desde el punto de datos hasta la línea de regresión ajustada. La medida de todos los errores residuales muestra lo mal que encaja la línea con todo el conjunto de datos. <br>
+										Matemáticamente puede ser demostrado por la ecuación, el error de cuadrado medio, mostrado como (MSE). <br>
+										<img src="../images/MSE.PNG" alt=""> <br>
+										Nuestro objetivo es encontrar una línea en la que se minimice la media de todos los errores, en otras palabras, el error medio de la predicción usando la línea de ajuste debe minimizarse. <br>
+										<blockquote>
+											<cite>
+												El objetivo de la regresión lineal es minimizar la ecuación de MSE, y para minimizarla deberíamos encontrar los mejores parámetros para θ0 y θ1.
+											</cite>
+										</blockquote>
+										¿Cómo encotrar θ0 y θ1 de tal manera que se minimiza este error? <br>
+										¿Cómo podemos encontrar una línea tan perfecta? o ¿Deberíamos mover la línea de forma aleatoria y calcular el valor de MSE cada vez, y elegir el mínimo? <br>
+										No, en realidadm tenemos dos opciones aquí:
+										<ul>
+											<li>Opción 1- Podemos usar un enfoque matemático.</li>
+											<li>Opción 2- Podemos usar un enfoque a optimización.</li>
+										</ul> 
+										Como se ha mencionado anteriormente θ0 y θ1, en la regresiñon lineal simple, son los coeficioentes de línea de ajuste. Podemos usar una simple ecuación para estimar estos coeficientes, Esto esm dado que es una regresión lineal simple, con sólo 2 parámetros, y sabiendo que θ0 y θ1 
+										son el intercepto y la pendiente de la línea, podemos estimarlos directamente a partir de nuestros datos. Se requiere que calculemos la media de las columnas independientes y dependientes, objetivo del conjunto de datos. <br>
+										Tenga en cuenta que todos los datos deben estar disponibles para atravesar y calcular los parámetros. Se puede mostrar que la intercepción y la pendiente se puede calcular usando estas ecuaciones. Podemos empezar por estimar el valor de θ1. <br>
+										<img src="../images/" alt=""> <br>
+										Esta es la forma en la que se puede encontrar la pendiente de una línea basado en los datos. x<sub>-</sub> es el valor promedio para el tamaño del motor en nuestro conjunto de datos. <br>
+										<img src="../images/" alt=""> <br>
+										Los xi y yi de la ecuación se refiere al hecho que tenemos que repetir estos cálculos a través de todos los valores de nuestro conjunto  de datos y se refiere en el valor i'th de x o y. <br>
+										Aplicando todos los valores, encontramos θ1=39; es nuestro segundo parámetro. Se usa para calcular el primer parámetro, que es la intercepción de la línea. Ahora, podemos conectar θ1 a la ecuación de la línea para encontrar el valor de θ0. <br>
+										Se calcula fácilmente el valor θ0=125.74, Así que, estos son los dos parámetros para la línea donde θ0 es también llamado coeficiente de derivación y θ1 es coeficiente para la columna de emisión de CO<sub>2</sub>. <br>
+										Ahora, podemos escribir el polinomio de la línea, así que sabemos cómo encontrar el mejor ajuste para nuestros datos, y su ecuación. 
+										<hr>
+										¿Cómo podemos usarlo para predecir la emisión de un nuevo coche basado en su tamaño del motor? <br>
+										Después de que encontramos los parámetros de la ecuación lineal, hacer predicciones es tan simple como solucionar la ecuación para un conjunto específico de entradas. Imaginemos que estamos predicioendo CO<sub>2</sub> Emission (y) de EngineSize (x) para el 
+										automóvil en el registro número 9. Representación de modelo de regresión lineal para este problema sería <b>y^=θ0 + θ1 x1.</b>, si lo correlacionamos con nuestro conjunto de datos, sería CO<sub>2</sub>Emission = θ0 + θ1 EngineSize <br>
+										Por ejemplo, vamos a usar θ0=125 y θ1=39. Por lo tanto, podemos volver a escribir el modelo lineal como CO<sub>2</sub>Emission = 125 + 39EngineSize. <br>
+										Ahora, conectamos la nivena fila de nuestro conjunto de datos y calcule la emisión de CO<sub>2</sub> para un conce con EngineSize=2,4. Así:
+										<code>
+											CO<sub>2</sub>Emission= 125 + 39 x 2.4 = 218.6
+										</code> <br>
+										Podemos predecir que las emisiones para el coche específico sería de 218.6. <br>
+										La <b>regresión lineal</b> es útil, sencillamente, es la regresión más básica que hay que utilizar y entender, de hechom una razón por la que la regresión lineal es tan útil es que es rápida, no requiere ajuste de parámetros, por lo tanto, algo parecido a ajustar el parámetro K en los 
+										K-Vecinos más cercanos o la tasa de aprendizaje en las redes neuronales no es algo sobre que preocuparse. La regresión lineal es fácil de entender y altamente interpretable
 
+										CO<sub>2</sub>
+										θ1
 									</p>
 								</article>
 							</div>
