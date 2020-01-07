@@ -212,6 +212,13 @@ echo "------------------"
 echo "Terminado (x5)"
 echo "------------------"
 
+git add ../contents/. &&
+git nota "Pagina Contenidos" &&
+git sube 
+echo "------------------"
+echo "Terminado (x6)"
+echo "------------------"
+
 ############
 # README   #
 ############
@@ -223,5 +230,19 @@ echo "Terminado (x1)"
 echo "------------------"
 echo ""
 echo ""
+
+####################
+# OTROS CONTENIDOS #
+####################
+git add . &&
+git nota "Other contents" &&
+git sube
+echo "=> 0%"
+echo "===> 25%"
+echo "======> 50%"
+echo "=========> 75%"
+echo "===========> 100%"
+echo "Fin de subida de archivos"
+
 sleep 5
 git status
