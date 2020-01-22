@@ -435,11 +435,29 @@ plt.ylabel("Emission")
 										Existen distintas métricas de evaluación de modelos, utilicemos MSE para calcular la exactitud de nuestro modelo basado en el set de prueba: 
 										<ol> 
 											<li> Error absoluto de medida: Es una media del valor absoluto de los errores. Es la métrica más fácil de comprender ya que simplemente es el promedio de los errores. </li>
-											<li> Error Cuadrado Medio (MSE): El Error Cuadrado Medio es la media del error cuadrático. Es más popular que el error de Media absoluto porque </li>
-											<li></li>
-											<li></li>
+											<li> Error Cuadrado Medio (MSE): El Error Cuadrado Medio es la media del error cuadrático. Es más popular que el error de Media absoluto porque hace foco en grandes errores. Esto se debe a que el término cuadrático tiene errores más grandes que van creciendo en comparación con más pequeños.</li>
+											<li> Error Cuadrático Medio (RMSE): R-cuadrática no es un error, sino que es una media popular para darle precisión a nuestro modelo. Representa cuán cerca están los datos de la línea de regresión ajustada.</li>
 										</ol>
+										Mientras más alto el R-cuadrático, mejor se encontrarña ajustado el modelo respecto de los datos. EL puntaje mejor posible es 1.0 y puede tomar valores negativos (porque el modelo puede ser arbitrariamente peor). <br>
+										<pre><code>from sklearn.metrics import r2_score
+
+test_x = np.asanyarray(test[['ENGINESIZE']])
+test_y = np.asanyarray(test[['CO2EMISSIONS']])
+test_y_ = regr.predict(test_x)
+
+print("Error medio absoluto: %.2f" % np.mean(np.absolute(test_y_ - test_y)))
+print("Suma residual de los cuadrados (MSE): %.2f" % np.mean((test_y_ - test_y) **2))
+print("R2-score: %.2f" % r2_score(test_y_,test_y))
+										</code></pre>
 									</p>
+									<cite>
+										<h2>¿Deseas aprender más?</h2>
+										<p>
+											IBM SPSS Modeler es una plataforma para analytics que contiene varios algoritmos de machine learning. Fue diseñada para acercar inteligencia predictiva a las decisiones hechas por individuos, grupos, sistemas, toda la empresa. Un free trial está disponible a través del curso en: SPSS Modeler. <br>
+											Así mismo, puedes utsa Watson Studio para ejecutar estos notebooks más rápido y con datasets más grandes, Wantson Studio es una solución en la nube lider de IBM's para científicos de datos, construída por científicos de datos. Con Jupyter Notebooks, RStudio, Apache Spark y librerías conocidas pre instaladas 
+											en la nube, Watson Studio posibilita
+										</p>
+									</cite>
 								</article>
 							</div>
 
