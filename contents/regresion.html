@@ -232,6 +232,152 @@
 										utilizanso la variable EngineSize.
 									</p>
 								</article>
+								<article class="box post">
+									<h2>Laboratorio: Regresión Lineal Simple.</h2>
+									<p>
+										Este curso usa CC Labs, un ambiente virtual online que dispone al alcance de la mano la experiencia necesaria sin tener que instalar y configurar herramientas de software. 
+										Se accede a conocidas herramientas de código abierto de data science (ciencia de datos) <b>directo desde el navegador</b>, como ser el <b>Jupyter Notebook</b>, el cual se usa para practicar 
+										con Spark en el presente laboratorio. <br>
+										<i><b>Cómo comenzar los ejercicios del presente módulo (Jupiter Notebook):</b></i> <br>
+										Hacer click en el botón <b>start lab</b>, seguir las instrucciones de la notebook y a aprender se ha dicho! :) <br>
+										Puede hacer click en las flechas y los botones de arriba para visualizar las respuestas para este laboratorio. <br> 
+										<strong>¿Aún con problemas para abrir este ejercicio?</strong> Queremos enterarnos inmediatamente! Contacta en el botón de <i>Support</i>. <br>
+										<blockquote>
+											<h3>¿Deseas aprender más?</h3>
+											<p>
+												IBM SPSS Modeler es una plataforma para analytics que contiene varios algoritmos de machine learning. Fue diseñada para acercar inteligencia predictiva a las decisiones hechas por individuos, 
+												grupos, sistemas, toda la empresa. Un free trial está disponible a través de este curso en <a href="https://cutt.ly/Krmv9ZE" target="_blank" rel="noopener noreferrer">SPSS Modeler for Mac</a> 
+												y <a href="https://cutt.ly/irmv2E2" target="_blank" rel="noopener noreferrer">SPSS Modeler for Windows</a>. <br>
+												También, es posible utilizar Data Science Experience para ejecutar más rápidamente y sobre datasets (conjunto de datos) más grandes. Data Science Experience es una solución de IBM lider para científicos 
+												de datos en la nube, hecha `pr científicos de datos. Con Jupiter Notebooks, RStudio, Apache Spark y librerías conocidas pre instaladas en la nube, DSX (Data Science eXperience) posibilita a los científicos 
+												de datoscolaborar en sus proyectos sin tener que instalar nada. Sumase a la comunidad de usuarios DSW hoy mismo por medio de una cuenta gratuita en 
+												<a href="https://www.ibm.com/cloud/watson-studio?cm_mmc=Email_Outbound-_-Developer_Ed+Tech-_-WW_WW-_-Campaign-Cognitive+Class-WatsonStudio-ML0101EN&cm_mmca1=000026UJ&cm_mmca2=10006555&cm_mmca3=M12345678&cvosrc=email.Outbound.M12345678&cvo_campaign=000026UJ" target="_blank" rel="noopener noreferrer">Data Science Experience</a>.
+											</p>
+										</blockquote>
+									</p>
+									<h2>Regresión Simple Lineal - Cognitive Class.ai</h2>
+									<p>
+										<h4>Acerca de este lab.</h4>
+										<p>
+											Aprenderemos cómo utilizar la librería scikit-larn para implementar regresión lineal simple. Descargaremos un set de datos relacionado al consumo de combustible y a la emisión del dióxido de Carbono en autos. Luego, separaremos nuestros datos en un set 
+											de entrenamiento y en otro set de prueba, crearemos un modelo usando un set de entrenamiento, se evaluará usando el set de prueba para finalmente usar el modelo para predecir valores desconocidos.
+										</p>
+										<h4>Importando paquetes necesarios</h4>
+										<p>
+											<pre>import matplotlib.pyplot as plt
+import pandas as pd 
+import pylab as pl 
+import numpy as np 
+%matplotlib inline</pre>
+										</p>
+										<h4>Descargando los Datos</h4>
+										<p>
+											Para descargar los datos, usaremos !wget desde IBM Object Storage: 
+											<blockquote>
+												!wget -O FuelConsumption.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv
+											</blockquote>
+											<strong>¿Sabías?</strong> Cuando se trata de Machine Learning, seguro trabajarás con grandes datasets (juego de datos). Entonces, ¿dónde podrás guardar esos datos? IBM ofrece una oportunidad única para las empresas, con 10Tb de IBM Cloud Object Storage: 
+											<a href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-32723&cm_mmc=Email_Outbound-_-Developer_Ed+Tech-_-WW_WW-_-Campaign-Cognitive+Class-ML0101EN-Object+Storage&cm_mmca1=000026UJ&cm_mmca2=10006555&cm_mmca3=M12345678&cvosrc=email.Outbound.M12345678&cvo_campaign=000026UJ" target="_blank" rel="noopener noreferrer">Sign up now for free</a>
+										</p>
+										<h4>Understanding the Data</h4>
+										<p>
+											<blockquote><code>FuelConsumption.csv</code></blockquote>
+											Hemos descargado el dataset de consumo de combustible, <code>FuelConsumtion.csv</code>, el cual contiene ratings específicos al consumo de combustible y emisiones de dióxido de carbono para aquellos vehículos ligeros en la venta minorista dentro de Canadá. 
+											<a href="https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64" target="_blank" rel="noopener noreferrer">Dataset source</a>. 
+											<ul>
+												<li>
+													<strong>
+														Modelyear
+													</strong>
+													e.g. 2014
+												</li>
+												<li>
+													<strong> 
+														Make
+													</strong>
+													e.g ILX
+												</li>
+												<li>
+													<strong>
+														Vehicle size
+													</strong> 
+													e.g SUV
+												</li>
+												<li>
+													<strong>
+														Engine size
+													</strong> 
+													e.g 4.7
+												</li>
+												<li>
+													<strong>
+														Cylinders
+													</strong> 
+													e.g 6 
+												</li>
+												<li>
+													<strong>
+														Transmission
+													</strong>
+													e.g A6
+												</li>
+												<li>
+													<strong>
+														Fuel consumption in city (L/100km)
+													</strong> 
+													e.g 9.9
+												</li>
+												<li>
+													<strong>
+														Fuel consumption in hwy (L/100km)
+													</strong>
+													e.g 8.9
+												</li>
+												<li>
+													<strong>
+														Fuel consumtion comb (L/100km)
+													</strong>
+													e.g 9.2
+												</li>
+												<li>
+													<strong>
+														CO<sub>2</sub> Emissions (g/km)
+													</strong>
+													e.g 182 &rarr; low &rarr; 0
+												</li>
+											</ul>
+										</p>
+										<h4>Leyendo los datos</h4>
+										<p>
+											<pre><code>df = pd.read_csv("FuelConsumption.csv")
+# Un vistazo dentro del set de datos 
+df.head()												
+											</code></pre>
+										</p>
+										<h4>Explotación de datos</h4>
+										<p>
+											Tengamos primero una exploración descriptiva de nuestros datos. <br>
+											<pre><code># Sumarizar los datos 
+df.describe()												
+											</code></pre>
+											Seleccionemos algunas características para explorar más en detalle. <br>
+											<pre><code>cdf = df[['enginesize','cylinders','fuelconsumption_comb','co2emissions']] 
+cdf.head(9)												
+											</code></pre>
+											Ahora, comparemos estas características anteriores con la emisión de carbono, para ver cuán lineal es la regresión: 
+											<pre><code> plt.scatter(cdf.FUELCONSUMPTION_COMB, cdf.CO2EMISSIONS,color='blue')
+plt.xlabel("FUELCONSUMPTION_COMB")
+plt.ylabel("Emission")
+plt.show()												
+											</code></pre> <br>
+											<pre><code> plt.scatter(cdf.ENGINESIZE, cdf.CO2EMISSIONS, color='blue')
+plt.xlabel("Engine size")
+plt.ylabel("Emission")
+plt.show()
+											</code></pre>
+										</p>
+									</p>
+								</article>
 							</div>
 
 					</div>
