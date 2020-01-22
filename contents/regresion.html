@@ -419,9 +419,17 @@ print ('Intercept: ', regr.intercept_)
 										</p>
 										<h4>Trazar las salidas</h4>
 										<p>
-											Podemos marcar la recta de ajuste sobre los datos:
+											Podemos marcar la recta de ajuste sobre los datos: <br>
+											<pre><code>plt.scatter(train.ENGINESIZE, train.CO2EMISSIONS, color='blue')
+plt.plot(train_x, regr.coef_[0][0]*train_x + regr.intercept_[0], '-r')	
+plt.xlabel("Engine size")	
+plt.ylabel("Emission")
+											</code></pre>
 										</p>
 									</p>
+								</article>
+								<article class="box post">
+
 								</article>
 							</div>
 
