@@ -480,7 +480,14 @@ print("R2-score: %.2f" % r2_score(test_y_,test_y))
 										o x2 para los cilindros, etc. El primer elemento del conjunto de características se establecería en 1, porqie convierte el 0_0 en el parámetro de intercepción o sesgo cuando el vector se multiplica por el vector de parámetro. Por favor, observe que 0^T x en un espacio dimensional, es la ecuación de una línea. <br>
 										Es lo que usamos en regresión lineal simple, en dimensiones más altas, cuando tenemos más de una entrada (o x), la línea se denomina plano o hiper-plano. Y esto es lo que usamos para la regresión lineal múltiple. Por lo tanto, la idea es encontrar el mejor hiper-plano para nuestros datos. Para este fin, y como es el caso en la regresión lineal, debemos estimar los valores para el vector 0 que mejor predice el valor del campo objetivo 
 										en cada fila. <br>
-										Para lograr este objetivo, tenemos que minimizar el error de la predicción, ahora, la pregunta es "¿Cómo podemos encontrar los parámetros optimizados?" Para encontrar los parámetros optimizados para nuestro modelo, primero debemos entender cuáles son los parámetros optimizados
+										Para lograr este objetivo, tenemos que minimizar el error de la predicción, ahora, la pregunta es "¿Cómo podemos encontrar los parámetros optimizados?" Para encontrar los parámetros optimizados para nuestro modelo, primero debemos entender cuáles son los parámetros optimizados. A continuación, encontraremos una forma de optimizar los parámetros. <br>
+										En resumen, los parámetros optimizados son los que conducen a un modelo con los erores menos graves, supongamos, por un momento, que ya hemos encontrado el vector de parámetros de nuestro modelo, significa que ya conocemos los valores del vector 0. Ahora, podemos usar el modelo, y el conjunto de características de la primera fila de nuestro dataset para predecir la emisión de CO<sub>2</sub> para el primer coche, correcto?
+										<br>
+										Si insertamos los valores del conjunto de características a la ecuación del modelo, encontraremos y digamos, por ejemplo, que devuelve 140 como valor predicho para esta fila específica. <br>
+										¿Cuál es el valor real? y=196 <br>
+										¿Qué tan diferente es el valor pronosticado del valor real de 196? Bueno, podemos calcularlo simplemente, 196-140=56. Este es el error de nuestro modelo, sólo para una fila, o un coche, en nuestro caso. Como es el caso en regresión lineal, podemos decir qie el error aquí es la distancia desde el dato puntual hasta el modelo de regresión ajustada. La media de todos los errores residuales muestra qué tan malo es el modelo representa el dataset. 
+										<b><i>Se denomina mean squared error o MSE. </i></b> <br>
+										Matemáticamente, la MSE puede ser mostrada por la ecuación. Si bien esta no es la única forma de exponer el error de un modelo de regresión lineal múltiple, es una de las formas más populares de hacerlo. el mejor modelo para nuestro dataset 
 									</p>
 								</article>
 							</div>
