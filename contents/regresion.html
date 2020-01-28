@@ -512,6 +512,35 @@ print("R2-score: %.2f" % r2_score(test_y_,test_y))
 										<img src="../images/Q&A.PNG" alt="">
 									</p>
 								</article>
+								<article>
+									<header class="style1">
+										<h2>Model Evaluation in Regression Models</h2>
+									</header>
+									<p>
+										En este caso  cubriremos la evaluación de modelos. El objetivo de la regresión es crear un modelo para predecir con precisión un caso desconocido. <br>
+										Con este fin, tenemos que realizar una evaluación  de regresión despueés de crear el modelo, en este caso, estudiaremos dos tipos de enfoques de evaluación que puedan ser utilizados para lograr este objetivo, estos enfoques son:  el entrenamiento y la prueba em el mismo dataset, y la división  del tren de pruebas.
+										Además, introduciremos algunas métricas para la precisión de los modelos de regresión. <br>
+										¿Cómo podemos calcilar la precisión de nuestro modelo? En otrras palbaras, ¿cuánto podemos congiar en este modelo para la prediccion de una muestra desconocida, usando un determinado dataser y habliendo construido un modelo como la regresión lineal. Una de las soluciones consiste en seleccionar una parte de nuestro dataset para la realización de pruebas. <br>
+										Por ejemplo, siponfamos que tenemos 10 registros en nuestro dataset, usamos todo el dataset para el entrenamiento, u construimos un modelo usando este conjunto de entrenamiento, Ahora, seleccionamos una pequeña porción del dataset, tales como los números de fila 6 a 9, pero sin etiquetas. <br>
+										Este conjunto, se denomina un conjunto de pruebas, que tiene las etiquetas, pero las etiquetas no son usadas para la predivvión y se usan sólo como <i>ground truth.</i> <br> 
+										Las etiquetas se denominan "valores reales" del conjunto de pruebas, ahora, pasamos el conjunto de características de la parte de prueba de nuestro modelo construido, y predicen los valores de destino. <br>
+										Esto indica que tan preciso es actualmente nuestro modelo, hay diferentes métricas para informar de la precisñin del modelo, pero la mayoría de ellos trabajan generalmente, basado en la similitud de los valores pronosticados y reales; sólo comparamos los valores reales y con los valores previstos que se indica como y para el conjunto de pruebas. <br>
+										El error del modleo es calcilado como la diferenciapromedio entre los valores predicho y los reales para todas las filas. Podemos escribir este error como una ecuación, entonces, el primer enfoque de evaluacióndel que avabamos de hablar es el más simple: formar y probar en el mismo dataset. En un sentido general,  cuando se prueba con un dataset en el que se conoce el valor objetivo 
+										para cada dato puntual, es capaz de obtener un porcentaje de predicciones exactas para el modelo, este enfoque de evaluación probablemente tendría una alta precisión de formación y una baja precisión fuera de la muestra, ya que el modelo conoce todos los data points de prueba de la formación. <br>
+										¿Qué es la precisión de formación y la precisión de fuera  de la muestra?  Hemos dicho que la fomración  y las pruebas deen el mismo dataset  produce una alta precusuín de formación, pero ¿qué es exactamente la "precisión de formación? La precisión de la fomración es el  porcentaje de predicción correcta que hace el modelo cuando se usa el dataset de pruebas
+										Sin embargo,, una alta precisión en la formación no es necesariamente algo bueno. Por ejemplo, tener una alta precisión de formación puede dar como resultado un 'sobreajuste' de los datos, esto significa que el modelo esta demasiado formado en el dataset, que puede capturar el estruendo y producir un modelo no generalizado. La precisión fuera de la muestra es el porcentaje de las predicciones 
+										correctamente en las que el modelo  realiza sobre los datos en los que NO ha sido formado el modelo. Hacer una "formación y prueba" en el mismo dataset probablemente tendrá una precisión baja fuera de la muestra debido a la probabilidad de estar en sobreajuste, es importante que nuestros modelos tengan una precisión alta, fuera  de la muestra, porque el propósito de nuestro modelo es, por supuesto, hacer predicciones correctas 
+										sobre datos desconocidos, entonces, ¿cómo podemos mejorar la precisión fuera de la muestra? <br>
+										Una forma consistente en utilizar otro enfoque de evaluación denominado "Train/Test Split". <br>
+										En este enfoque, seleccionamos una parte de nuestro dataset para formación, por ejemplo, filas de 0 a 5, y el resto se usa para probar, por ejemplo, las filas 6 a 9. El modelo se basa en el conjunto de formación, entonces, el conjunto de características de prueba se pasa al modelo de la predicción y finalmente, los valores pronosticados para el conjunto de pruebas se comparan con los valores reales del dataset. <br>
+										Este segundo enfoque de evaluación se denomina "Train/Test Split", implica la división del dataset en conjuntos de formación y pruebas, respectivamente, que son mutuamente excluyentes, después de lo cual, se forman con el conjunto de formación y se prueba con el conjunto de pruebas. <br>
+										Esto proporcionará una evaluación más precisa sobre la precisión de fuera de la muestra, ya que la prueba del dataset no forma parte del dataset que se ha usado para formar los datos, es maás realista para los problemas del mundo real. Esto significa que conocemos los resultados de cada dato puntuañ en este dataset, haciendo genial de probrar. <br>
+										Y dado que estos datos no se ha ¡n usado para formar el modelo, el modelo no tiene conocimiento del resultado de estos data points. <br>
+										Así que, en escencia, es realmente una prueba fuera de la muestra. Sin embargo, una alta precisión en la formación no es necesariamente algo bueno, por ejemplo, tener una alta precisión de formación puede dar  como resultado un sobreajuste de los datos. esto significa que el modelo está demasiado formado en el dataset, que puede capturar el estruendo y producir un modelo no generalizado. <br>
+										La presición fuera de la muestra es el porcentaje de las predicciones correctas en las que el modelo realiza sobre datos en los que no ha sido formado el modelo. <br>
+										Hacer un formación y prueba en el mismo dataset probablemente tendrá  una precisión baja fuera de la muestra debido a la probabilidad de estar en sobreajuste, es importante que nuestros modelos tengan una precisión alta, fuera de la muestra porque es el propósito de modelo.
+									</p>
+								</article>
 							</div>
 
 					</div>
