@@ -502,9 +502,11 @@ print("R2-score: %.2f" % r2_score(test_y_,test_y))
 										Imaginemos que estamos prediciendo emisiones de CO<sub>2</sub> y/o  de otras partículas para el automóvil en el registro número 9, nuestra representación de modelo de regresión lineal para este problema sería: <code>y= θ^T x</code>. Una vez que encontremos los parámetros, podemos conectarlos en la ecuación del modelo lineal. Por ejemplo, vamos a usar 00 = 125,01 = 6.2, 02 = 14, y entonces así. Si lo mapeamos con nuestro dataset, podemos reescribir el modelo lineal
 										como "Co<sub>2</sub> Emission=125 más 6.2 multiplicado por el tamaño del motor más 14 multiplicado por el cilindro", así, como puede ver, estimar la regresión lineal múltiple la importancia relativa de los predictores. Por ejemplo, muestra cque cilindro tiene mayor impacto en las cantidades de emisiones de CO<sub>2</sub> en comparación con el tamaño del motor. Ahora, conectemos la novena fila de nuestro dataset y calculemos la emisión de CO<sub>2</sub> para un coche con el
 										tamaño  del motor de 2.4. Así que la Emisión de CO<sub>2</sub> = 125+6.2x2.4+14x4 .... y así, podemos predecir la emisión de CO<sub>2</sub> para este tipo de coche sería 214,1. <br>
+										<img src="../images/making predictions with multiple linear regression.PNG" class="image photo" alt=""> <br>
 										Como se ha visto, se puede usar múltiples variables independientes para predecir un valor objetivo en una regresión lineal múltiple. A veces resulta un mejor modelo en comparación con el uso de una regresión  lineal simple,  que usa sólo una variable independiente para predecir la variable dependiente. Ahora la pregunta es: ¿Cuántas variables independientes se deberían usar para la predicción? ¿Deberíamos usar todos los campos de nuestro dataset?  ¿Agregar variables independientes 
 										a un modelo de regresión lineal múltiple simepre aumenta la presición del modelo? Básicamente, agregar demasiadas variables independientes sin ninguna justificación teórica puede resultar un modelo de sobreajuste. Un modelo de sobreajuste es un problema real porque es demasiado complicado 
 										para su dataset y no es lo suficientemente general como para ser usado para la predicción. Por lo tanto, se recomienda evitar el uso de muchas variables para la predicción, hay diferentes maneras de evitar el sobreajuste de un modelo en regresión, sin emabrgo, eso está fuera del alcance del curso. 
+										<img src="../images/Q&A.PNG" class="image photo" alt="">
 										La siguiente pregunta es: ¿Deben las variables indeoendientes ser continuas? Básicamente, las variables independientes categóricas pueden incorporarse en un modelo de regresión al convertirlas en variables numéricas. Por lo tanto, dada una variable binaria como tipo de coche, el código es "θ" para "Manual" y 1 para "Automático". 
 										Como último punto, recuerde que la regresión lineal múltiple es un tipo específico de regresión lineal, por lo tanto, tiene que haber una relación lineal entre la variable dependiente y cada una de las variables independientes. Hay una serie de formas de comprobar la relación lineal,  por ejemplo, puede utilizar diagramas de dspersión y, luego, comprobar  visualmente la linealidad. Si la relación mostrada en el diagrama de dispersión no es lineal, entonces, debe usar regresión no lineal.
 									</p>
@@ -551,7 +553,18 @@ print("R2-score: %.2f" % r2_score(test_y_,test_y))
 								<article>
 									<h2>Métricas de evaluación en modelos de regresión.</h2>
 									<p>
-										
+										Las métricas de evaluación son usadas para explicar el rendimiento de un modelo, como se mencionó, básicamente, podemos comparar los valores actuales y predecir los valores a calcular la precisión de un modelo de regresión. Las métricas de evaluación proporcionan un papel fundamental en el desarrollo  de un modelo, ya que proporciona una percepción con respecto a las áreas que requieren mejoras. Estaremos revisando una serie de modelos de evaluación métrica, incluyendo: 
+										<ul>
+											<li>Mean Absolute Error (MAE)</li>
+											<li>Mean Squared Error (MSE)</li>
+											<li>Root Mean Squared Error (RMSE)</li>
+										</ul>
+										Pero, antes de poder definir estos, tenemos que definir lo que realmente es un error, en el contexto de la regresión, el error del modelo es la diferencia entre los datos puntuales y la línea de tendencia generada por el algoritmo. Dado que hay múltiples data points, un error puede ser determinado de múltiples maneras. <br>
+										Mean Absolute error, es la medida más fácil de entender, ya que es solo el error promedio. <br>
+										Media Squared Error (MSE) es la media del error cuadrado, es más popular que mean absolute error porque el enfoque se orienta más hacia grandes errores. Esto se debe a que el término al cuadrado aumenta exponencialmente los errores más grandes en comparación con los más pequeños. <br>
+										Root Mean Squared Errod (RMSE) es la raíz cuadrada del error del cuadrado medio, esta es una de las métricas más populares de las métricas de evaluación porque Root Mean Squared Error es interpretable en las mismas unidades como el vector de respuesta (o unidades "y") haciéndolo fácil de corelacionar la información. <br>
+										Relative Absolute Error (RAE), también conocido como la suma residual de cuadrado, donde la barra de y es un valor total del predictor simple. Relative Squared Errod (RSE) es muy similar a Relative Absolute Error, pero es ampliamente adoptado por la comunidad de data science, como es usado para calcular R-Squared. <br>
+										R-Squared no es un error, si no, es una métrica popular para la precisión de su modelo, representa qué tan cerca los valores de los datos se encuentran en la línea de regresión ajustada. Cuanto más alto sea el R cuadrado, mejor encaja el modelo a sus datos. Cada una de estas métricas se puede usar para cuantificar la predicción, la elección de la métrica depende completamente del tipo de modelo, el tipo de datos y el dominio del conocimiento.
 									</p>
 								</article>
 							</div>
