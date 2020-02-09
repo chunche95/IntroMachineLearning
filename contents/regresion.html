@@ -570,6 +570,27 @@ print("R2-score: %.2f" % r2_score(test_y_,test_y))
 										<img src="../images/what is an error of the model.PNG"  class="image photo" alt="">
 									</p>
 								</article>
+								<article>
+									<header>
+										<h2>Regresión No-Lineal</h2>
+									</header>
+									<p>
+										Estos data points corresponden al producto bruto interno (PBI) de China de 1960 a 2014. <br>
+										La primera columna, son los años, la segunda, el ingreso interno bruto anual correspondiente de china en dólares estadounidenses para ese año. Este es el aspecto de los data points. 
+										<img src="../images/should we use linear regression..PNG" class="image photo" alt=""> <br>
+										Ahora, tenemos un par de preguntas. En primer lugar, "¿Se puede predecir el PIB en función del tiempo?" y en segundo lugar, "¿Podemos usar una regresión lineal simple para modelarlo?" Dehecho, si los datos muestran una tendencia curvada, entonces la regresión lineal no producirá un resultado preciso cuando se compara con una regresión no lineal, simplemente porque, como su nombre indica, la regresión lineal presume que los datos son lineales. <br>
+										El diagrama de dispersión muestra que parece haber una fuerte relación  entre el PIB y el tiempo, pero la relación no es lineal. <br>
+										Como pueden ver, el crecimiento comienza lentamente, a partir de 2005 en adelante, el crecimiento es muy significativo. Y por último, se desacelera ligeramente en los años 2010. <br>
+										Se parece a una función logística o exponencial. Por lo tanto, requiere un método especial de calculación para el procedimiento de regresión no lineal. Por ejemplo, si asumimos que el modelo para estos data points son funcioens exponenciales, como por ejemplo, y= θ<sub>0</sub>+θ<sub>1</sub>[θ<sub>2</sub>]<sup>x</sup>, nuestro trabajo consiste en estimar los parámetros del modelo, es decir, θ,y usar el modelo ajustada para predecir el PIB para casos 
+										desconocidos o futuros. <br>
+										<img src="../images/data-fit.PNG" alt=""> <br>
+										De hecho, existen muchas regresiones diferentes que se pueden usar para adaptarse a cualquier aspecto del dataset. Aquí puede ver una línea de regresión cuadrática y cúbica, y puede continuar y continuar hasta el grado infinito. En esencia, podemos llamar a todos estos "regresión polinómica", donde la relación entre la variable independiente x y la variable dependiente y se modelan como un polinomio grado n en x. Con muchos tipos de regresión para elegir, 
+										hay una buena probabilidad de que uno se ajuste bien a su dataset. <br>
+										<img src="../images/different types of regression.PNG" alt=""> <br>
+										Recuerde, es importante elegir una regresión que se adapte mejor a los datos, entonces, ¿qué es la Regresión polinómica? La regresión polinómica se ajusta a una línea curvada desde sus datos. Un ejemplo simple de polinomial, con el grado 3, se muestra como y=θ<sub>0</sub>+θ<sub>1</sub>x + θ<sub>2</sub>x<sup>2</sup> + θ<sub>3</sub>x<sup>3</sup> o la potencia de 3, donde θ son parámetros a estimar que hacen que el modelo se ajuste perfectamente a los datos subyacentes. 
+										
+									</p>
+								</article>
 							</div>
 
 					</div>
