@@ -231,6 +231,18 @@ echo "------------------"
 echo ""
 echo ""
 
+############
+# Programas   #
+############
+git add ../contents/Programas/. &&
+git nota "Programas prácticos de ML & IA" &&
+git sube 
+echo "------------------"
+echo "Terminado (x1)"
+echo "------------------"
+echo ""
+echo ""
+
 ####################
 # OTROS CONTENIDOS #
 ####################
