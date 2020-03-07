@@ -1,4 +1,4 @@
-#!/bin/python 
+#!/bin/bash 
 
 # Clonamos el repositorio con el proyecto 
 git clone https://github.com/pjreddie/darknet
