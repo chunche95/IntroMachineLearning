@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Introduction to Machine Learning - Cambridge University Press</title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<header id="header">
+									<h1><a href="index.html" id="logo">Chunche95</a></h1>
+									<nav id="nav">
+										<a href="index.html" class="current-page-item">Homepage</a>
+										<a href="introductionML.html">Introduction</a>
+										<a href="densityEstimation.html">Density Estimation</a>
+										<a href="optimization.html">Optimization</a>
+                                        <a href="onlineLearning.html">Online Learning and boosting</a>
+                                        <a href="conditionalDensities.html">Condit. Densities</a>
+                                        <a href="kernelsAndFuntionSpaces.html">Kernels and Funtion Spaces</a>
+                                        <a href="LinearModels.html">L. Models</a>
+									</nav>
+								</header>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Banner -->
+				<div id="banner-wrapper">
+					<div class="container">
+
+						<div id="banner">
+							<h2>Contents</h2>
+							<span>Introduction to Machine Learning - Cambridge University Press</span>
+						</div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main">
+					<div class="container">
+						<div class="row main-row">
+							<div class="col-6 col-12">
+
+								<section>
+									<h2>Preface</h2>
+									<p>
+                                        <a href="#"><img src="images/pic1.jpg" alt="" class="left" style="width:50%;"/></a>
+                                        Since this textbook we biased our selection of references 
+                                        towards easily accessible work rather than the original references. 
+                                        While this may not be in the interest of the inventos of these concepts,
+                                        it greatly simplifies access to those topics. Hence we encourage the reader 
+                                        to follow the references in the cited works should they be interested finding out who 
+                                        may claim intellectual ownership of certain key ideas. 
+                                    </p>
+									<footer class="controls">
+                                        <a target="_blank" href="https://github.com/chunche95/TensorFlow" class="button">My repository</a>
+                                    </footer>
+								</section>
+                            </div>
+								<section>
+									<h2>Introduction</h2>
+									<p>
+                                        Over the past two decades Machine Learning has become one of the mainstays of information 
+                                        technology and with that, a rather central, albeit usually hidden, part of out life. With the
+                                        ever increasing amounts of data becoming available ther is good reason to believe that smart
+                                        data analysis will become even more pervasive as a neccessary ingredient for technological progress.
+                                        <br>
+                                        The purpose of this chapter is to provide the reader with an overview over the vast range of applications 
+                                        which have at their heart a machine learning problem and to bring some degree of order to the zoo of problems. 
+                                        After that, we will discuss some basic tools from statitics and probability theory, since they form the lenguage
+                                        in which many machine learning problems must be phrased to become amenable to solving. Finally, we will outline 
+                                        a set of fairly basic yet effective algorithms to solve an important problem, namely that of classification. More 
+                                        sophisticated tools, a discussion of more general problems and a detailed analysis will follow in later parts of the book.
+                                    </p>
+									<ul class="big-image-list">
+										<li>
+                                            <a href="#"><img src="images/pic3.jpg" alt="" class="left" /></a> 
+                                    		<h3>A Taste of Machine Learning.</h3>
+											<p>
+                                                Machine Learning can apper in many guises. We now discuss a number of applications, the types of data they deal with,
+                                                and finally, we formalize the problems in a somewhat more stylized fashion. The latter is key if we want to avoid reinventing
+                                                the wheel for every new application. Instead, much of the art of machine learning is to reduce a range of fairly disparate 
+                                                problems to a set of fairly narrow prototypes. Much of the science of machine learning is then to solve those problems 
+                                                and provide good guarantees for the solutions. 
+											</p>
+										</li>
+										<li>
+                                            <h3>Applications.</h3>
+                                            <p>
+                                                Most readers will be familiar with the concept of web page <strong>ranking</strong>. That is, the process of submitting a query to
+                                                a search engine, which then finds webpages relevant to the query and which returns them in their order of relevance. 
+                                                See e.g. Figure 1.1 for an example of the query results for "machine learning". That is, the search engine returns a sorted list 
+												of webpages given a query. To achieve this goal, a search engine needs to 'know' which pages are relevant and which pages match the query.
+                                            </p>
+                                                <br>
+                                                <div>
+                                                    <img href="" src="images/machinelearningGoogle.PNG"  class="top blog-post-image" alt="Machine learning in google." style="width: 100%; height: 100%;">
+                                                    <span>
+                                                        Figure. 1.1 The top scoring webpages for the query "machine learning".
+                                                    </span>
+                                                </div>
+												<br>
+											<p>
+                                                Such knowledge can be gained from several sources: the link structure of webpages, their content, the frequency with which users will follow 
+                                                the suggested link in a query, or from examples of queries in combination with  manually ranked webpages. <br>
+                                                Increasingly machine learning rather than guesswork and clever engineering is used to automate the process of designing a good search engine 
+                                                <strong>[RPB06].</strong> <br>
+                                                A rather related application is <strong>collaborative filtering.</strong> Internet bookstores such as Amazon, or video retal sites such as Netflix 
+                                                use this information extensively to entice users to puchase additional goods ( or rent more movies). The problem is quite similar to the one of 
+                                                web page ranking. As before, we want to obtain a sorted list ( in this case of articles). The key diference is that an explicit query is missing and
+                                                instead we can only use past purchase and viewing decisions of the user to predict future viewing and purchase habits. The key side information here are 
+                                                the decisions made by  similar users, hence the collaborative nature of the process. See figure 1.2 for an example. It's clearly desirable to have an 
+												automatic system to solve this problem, there by guesswork and time <strong>[BK07]</strong>.
+												An equally ill-defined problem is thar of <b>automatic translation</b> of documents. At one extreme, we could aim at fully <i>undestanding</i> a text before 
+												translating it using a curated set of rules crafted by a computational linguist well versed in the two languages we would like  to traslate. This is a rather 
+												arduous task, in particular given that text is not always grammatically correct, nor is the document understanding part itself a trivial one. Instead, 
+												we could simply use examples of translated documents, such as the proceedings of the Canadian parliament or other multilingual entities to learnk how to translate 
+												between the two languages. In other words,we could use examples of translations to learn how to translate. This machine learning approach proved quite successful.
+												<br>
+												Many security applications, e.g. for access control, use face recognition as one of this components. That is, given the photo (or video recording) of a person, recognize 
+												who this person is. In other words, the system needs to classify the faces into one of many categories (Alice,Bob,Charlie,...) or decide that it is an unknown face. 
+												A similar, yet conceptually quite different problem is that of verification. Here the goal os to verify whether the person in question is who he claims to be. Note 
+												that differently to before, this is now a yes/no question. To deal with different lighting conditions, facial expressions, whether a person is wearing glasses, hairstyle, etc. 
+												It is desirable to have a system which learns which features are relevant for identifying a person.
+                                            </p>
+										
+										
+											<h3>Data.</h3>
+											<p>
+												It is useful to characterize learning problems according to the type of data they use. This is a great help when encountering new challenges, since quite often 
+												problems on similar data types can be solved with  very similar techniques. For instace natural language  processing and bioinformatics use very similar tools for 
+												strings of natural language text and for DNA sequences. <b>Vectors</b> constitute the most basic entity we might encounter in our work. For instance. a life insurance
+												company might be interesting in obtaining the vector of variables ( blood pressure, heart rate, height, weight, cholesterol level, smoker, gender) to infer the life 
+												expectancy of a potential customer. A farmer might be interested in determining the ripeness of fruit based on (size, weight, spectral data). An engineer might want to 
+												find dependencies in (voltage, current) pairs. Likewise one might  want to represent documents by a vector of counts which describe the occurence of words. The latter 
+												is commonly referred to as bag of words features. <br>
+												One of the challenges in dealing with vectors is that the scales and units of different coordinates may vary widely. For instance, we could measure the height in kilograms, 
+												punds, grams, tons, stones, all of which would amount to multiplicative changes. Likewise when representing temperatures, we have a full class of affine transdormations, depending 
+												on whether we represent then in terms of Celsius, Kelvin or Farenheit. One way of dealing with those in an automatic fashion is to normalize the data. We will discuss means of 
+												doing so in an automatic fashion. <br>
+												<strong>List:</strong> In some cases the vectors we obtain may contain a variable numbwe of fratures. For instance, a physician might not neccessarily decide to perform a full battery 
+												of diagnostic test if the patient appears to be healthy. <br>
+												<strong>Sets:</strong> Mays appear in learning problems whenever there is a large number of potencial causes of an effect, which are not well determined. For instance, it is relatively easy 
+												to obtains data concerning the toxicity of mushrooms. It would be desirable to use such data to infer the toxicity of a new mushroom given information about its chemical compounds. However, 
+												mushrooms contains a cocktail of compounds out of which one or more may be toxic. Consequently we need to infer the properties of an object given a set of features, whose composition and number 
+												may vary considerably. <br>
+											</p>
+										</li>
+									</ul>
+								</section>
+
+							</div>
+							<div class="col-6 col-12-medium">
+
+								<article class="blog-post">
+                                    <!--
+                                    <h2>Just another blog post</h2>
+                                        <a class="comments" href="#">33 comments</a>
+                                        <a href="#"><img src="images/pic6.jpg" alt="" class="top blog-post-image" /></a>
+                                    -->
+                                    <h3>TensorFlow - Lesson 1.</h3>
+									<p>
+										<a href="https://colab.research.google.com/drive/1TY25ftzSwoxOEo2l0zE9ustAMoQJEsAj#scrollTo=pRllo2HLfXiu" target="_blank" rel="noopener noreferrer">EXAMPLES</a> <br>
+										When studying Machine Learning you will come across many different termis such as artificial intelligence, neural network, and deep learning. But what these terms actually mean and how 
+										do they relate to each other? <br>
+										Below we give brief description of these terms: 
+										<ul>
+											<li>
+												<strong>Artificial Intelligence:</strong>  A field of computer science that aims to make computers archieve human-style intelligence. There are many approaches to reaching this goal, including machine learning 
+												and deep learning.
+											</li>
+											<li>
+												<strong>Machine Learning:</strong> A set of related techniques in which computers are trained to perform a particular task rather than by explicitly programming them.
+											</li>
+											<li>
+												<strong>Neural Network:</strong> A construct in Machine Learning inspired by the network of neurons (nerve cells) in the biological brain. Neural networks are a fundamental part of deep 
+												learning, and will be covered in this course.
+											</li>
+											<li>
+												<strong>Deep Learning:</strong> A subfield of machine learning that uses multi-layered neural networks. Often, "machine learning" and "deep learning" are used interchangeably.
+											</li>
+										</ul>
+										<img src="images/MLIntroduction.PNG" alt="Estructura"> <br>
+										Machine Learning and Deep Learning also have many subfields, branches, and special techniques. A notable example of this diversity is the separation of Supervised Learning and Unsupersived Learning. <br>
+										To over simplify - in supervised learning you know what you want to teach the computer, while unsupervised learning is about letting the computer figure out what can be learned. Supervised learning is the  
+										most common type of machine learning, and will be the focus of this course. 
+									</p>
+									<h3>TensorFlow - Lesson 2.</h3>
+									<p>
+										<a href="https://colab.research.google.com/github/tensorflow/examples/blob/master/courses/udacity_intro_to_tensorflow_for_deep_learning/l02c01_celsius_to_fahrenheit.ipynb" target="_blank" rel="noopener noreferrer">EXAMPLES</a> <br>
+										<strong>Recap.</strong> <br>
+										You just trained your first machine learning model. We saw that by training the model with input data and the corresponding output, the model learned to multiply the input by 1.8 ant then add 32 to get the correct result. <br>
+										<img src="images/L2-TrainigMode.PNG" alt=""> <br>
+										This was really impressive considering that we only needed a few lines code: 
+										<blockquote><pre><code>
+10 = tf.keras.layers.Dense(units=1, input_shape=[1])
+model = tf.keras.Sequential([10])
+model.compile(loss='mean_squared error',  optimizer=tf.keras.optimizers.Adam(0.1))
+history = model.fit(celsius_q, farenheit_a, epochs=500, verbose=False)
+model.predict([100.0])
+										</code></pre></blockquote>
+										This example is the general plan for of any machine learning program. You will use the same structure to create and trains your neural network, and use it to make predictions.
+									</p>
+									<h3>The training Process.</h3>
+									<p>
+										The training process (happening in model.fit(...)) is really about tuning the internal variables of the networks to the best possible values, so that they can map the input to the 
+										output. This is achieved through an optimization process called Gradient Descent, which uses Numeric Analysis to find the best possible values to the internal variables of the model. <br>
+										o do machine learning, you don't really need to understand these details. But fot the curious: gradient descent iteratively adjust parameters, nudging them in the correct direction a bit at 
+										a time until they reach the best values. In this case "best values" means that nudging them any more would make  the model perform worse. The function that measure how good or bad the model is 
+										during each iteration is called the "loss function", and the goal of each nudge is to "minimize the loss function". <br>
+									</p>
+								</article>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-4 col-12-medium">
+
+								<section>
+									<h2>Más contenido</h2>
+									<p>
+                                        Seccion del footer.
+                                    </p>
+									<footer class="controls">
+										<a href="#" class="button">More</a>
+									</footer>
+								</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+
+								<div id="copyright">
+									&copy; Human Computing 3.0. All rights reserved. | Design: <a href="https://github.com/chunche95">Chunche95</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
